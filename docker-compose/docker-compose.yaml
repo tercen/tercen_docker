@@ -13,7 +13,7 @@ services:
   tercen:
     links:
       - couchdb
-    image: amaurel/tercen:latest
+    image: tercen/tercen:latest
     ports:
       - "5402:5400"
     env_file:
