@@ -2,7 +2,7 @@ version: "3.2"
 services:
 
   couchdb:
-    image: couchdb
+    image: couchdb:1.7.2
     env_file:
       - config/env/couchdb.env
     volumes:
