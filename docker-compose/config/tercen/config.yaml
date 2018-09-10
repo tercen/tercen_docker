@@ -52,13 +52,11 @@ tercen.rtools.dir: 'c:\Rtools'
 
 tercen.zip.cmd: /usr/bin/zip
 tercen.unzip.cmd: /usr/bin/unzip
-#tercen.r.lib.user: "resources/R_library_%v"
-#tercen.r.home: "resources/R"
 
 tercen.library.url: https://raw.githubusercontent.com/tercen/app-library/master/library_0.0.2.json
 
 tercen.gc.interval: '10' # in minutes
-tercen.gc.unclaim.task: '43200' # in minutes
+tercen.gc.unclaim.task: '10080' # one week in minutes
 
 tercen.r.image: scir:latest
 
