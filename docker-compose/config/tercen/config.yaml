@@ -1,0 +1,148 @@
+# ALL 0 # OFF 2000 # FINEST 300 # FINER 400 # FINE 500 # CONFIG 700 # INFO 800 # WARNING 900 # SEVERE 1000 # SHOUT 1200
+tercen.log.level: '400'
+
+tercen.secret: "3ab70b11-d7bd-4097-958f-01b7ac4e955f"
+tercen.token.validity: '7' #7 days
+
+tercen.admin.password: admin
+tercen.test.password: test
+
+tercen.port: '5400'
+tercen.address: 0.0.0.0
+tercen.http.static.dir: '/app/bin/web'
+
+tercen.webapp.port: '54000'
+tercen.webapp.timeout: '60'
+
+tercen.couchdb.scheme: http
+tercen.couchdb.address: couchdb
+tercen.couchdb.port: '5984'
+tercen.couchdb.user: admin
+tercen.couchdb.password: admin
+tercen.couchdb.initialize: 'true'
+
+tercen.client.uri: http://127.0.0.1:5400
+
+tercen.task.uri: http://127.0.0.1:5400
+
+tercen.worker.uri: http://127.0.0.1:5400
+tercen.worker.name: 'Worker'
+tercen.worker.username: admin
+tercen.worker.password: admin
+tercen.worker.isolates: '4'
+tercen.worker.memory: '4096000000'
+tercen.file.upload.max: '1000000000' # 1G
+
+tercen.file.dir: /scidata/upload/
+tercen.table.dir: /scidata/table/
+tercen.tmp.dir: /scidata/tmp/
+
+#tercen.file.dir: /tercen/upload/
+#tercen.table.dir: /tercen/table/
+#tercen.tmp.dir: /tercen/tmp/
+
+tercen.r.operator.folder: /scidata/operator/
+tercen.r.packrat.global.cache: /scidata/packrat/
+
+tercen.r.cmd: /usr/bin/R
+tercen.r.args:
+- "--no-save"
+- "--no-restore"
+- "--no-environ"
+- "--slave"
+
+tercen.nlopt.dir: 'c:\Tercen\resources\nlopt'
+tercen.rtools.dir: 'c:\Rtools'
+
+tercen.zip.cmd: /usr/bin/zip
+tercen.unzip.cmd: /usr/bin/unzip
+#tercen.r.lib.user: "resources/R_library_%v"
+#tercen.r.home: "resources/R"
+
+tercen.library.url: https://raw.githubusercontent.com/tercen/app-library/master/library_0.0.1.json
+
+tercen.gc.interval: '10' # in minutes
+tercen.gc.unclaim.task: '43200' # in minutes
+
+tercen.r.image: scir:latest
+
+tercen.docker.uri: https://127.0.0.1:2376
+tercen.docker.ca: /etc/docker/ca.pem
+tercen.docker.cert: /etc/docker/cert.pem
+tercen.docker.client.key: /etc/docker/key.pem
+
+Profiles:
+- kind: ApiCallProfile
+  name: 0.api.profile
+  nCalls: 240 # 120 calls/min
+- kind: ApiCallProfile
+  name: 1.api.profile
+  nCalls: 300
+- kind: ApiCallProfile
+  name: 2.api.profile
+  nCalls: 600
+#############################
+- kind: TableProfile
+  name: 0.table.profile
+  nRows: 5000000000
+  #  nRows: 50000000
+  nCols: 100
+- kind: TableProfile
+  name: 1.table.profile
+  nRows: 200000
+  nCols: 50
+- kind: TableProfile
+  name: 2.table.profile
+  nRows: 2000000
+  nCols: 50
+#############################
+- kind: CpuTimeProfile
+  name: 0.cpuTime.profile
+  cpuTime: 6000.0 # 100 min/month
+- kind: CpuTimeProfile
+  name: 1.cpuTime.profile
+  cpuTime: 3600.0 # 1h/month
+- kind: CpuTimeProfile
+  name: 2.cpuTime.profile
+  cpuTime: 3600000.0 # 10h/month
+##############################
+- kind: StorageProfile
+  name: 0.storage.profile
+  size: 10000000000 # 10g 100000000 # 100m
+- kind: StorageProfile
+  name: 1.storage.profile
+  size: 1000000000 # 1g
+- kind: StorageProfile
+  name: 2.storage.profile
+  size: 10000000000 # 10g
+################################
+- kind: RunProfile
+  name: 0.run.profile
+  memory: 102400000
+  kernelMemory: 30720000
+  blkioWeight: 200
+  pidsLimit: 20
+  ulimits_nofile: 1024
+  timeout: 50000000 # 50000 sec
+  storageSize: 10G
+  cpusetCpus: 0,1
+- kind: RunProfile
+  name: 1.run.profile
+  memory: 1024000000
+  kernelMemory: 307200000
+  blkioWeight: 200
+  pidsLimit: 20
+  ulimits_nofile: 1024
+  timeout: 300000 # 5 min
+  storageSize: 10G
+  cpusetCpus: 0,1
+- kind: RunProfile
+  name: 2.run.profile
+  memory: 4096000000
+  kernelMemory: 1365332992
+  blkioWeight: 200
+  pidsLimit: 20
+  ulimits_nofile: 1024
+  timeout: 600000 # 10 min
+  storageSize: 10G
+  cpusetCpus: 0,1

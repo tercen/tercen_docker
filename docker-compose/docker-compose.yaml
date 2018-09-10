@@ -1,0 +1,28 @@
+version: "1.0"
+services:
+
+  couchdb:
+    image: couchdb
+    env_file:
+      - config/env/couchdb.env
+    volumes:
+      - couchdb-data:/usr/local/var/lib/couchdb
+      - ./config/couchdb:/usr/local/etc/couchdb/local.d
+    restart: always
+
+  tercen:
+    links:
+      - couchdb
+    image: amaurel/tercen:latest
+    ports:
+      - "5402:5400"
+    env_file:
+      - config/env/couchdb.env
+    volumes:
+      - tercen-data:/var/lib/tercen/data
+      - ./config/tercen:/etc/tercen
+    restart: always
+
+volumes:
+  couchdb-data:
+  tercen-data:
