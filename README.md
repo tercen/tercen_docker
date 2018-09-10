@@ -1,8 +1,18 @@
+Run Tercen using Docker.
+
+# Setup
+Install [docker-compose](https://docs.docker.com/compose/).
+
+Clone the following repository
 ```bash
-docker pull tercen/tercen:latest
+git clone https://github.com/tercen/tercen_docker.git
+cd tercen_docker
 ```
 
+Then start tercen ...
+
 ```bash
-cd docker-compose
 docker-compose up
 ```
+
+Got to [http://127.0.0.1:5402](http://127.0.0.1:5402)
