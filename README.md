@@ -1,5 +1,5 @@
 ```bash
-docker pull amaurel/tercen:latest
+docker pull tercen/tercen:latest
 ```
 
 ```bash
