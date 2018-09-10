@@ -33,18 +33,14 @@ tercen.worker.isolates: '4'
 tercen.worker.memory: '4096000000'
 tercen.file.upload.max: '1000000000' # 1G
 
-tercen.file.dir: /scidata/upload/
-tercen.table.dir: /scidata/table/
-tercen.tmp.dir: /scidata/tmp/
+tercen.file.dir: /var/lib/tercen/data/upload/
+tercen.table.dir: /var/lib/tercen/data/table/
+tercen.tmp.dir: /var/lib/tercen/data/tmp/
 
-#tercen.file.dir: /tercen/upload/
-#tercen.table.dir: /tercen/table/
-#tercen.tmp.dir: /tercen/tmp/
+tercen.r.operator.folder: /var/lib/tercen/data/operator/
+tercen.r.packrat.global.cache: /var/lib/tercen/data/packrat/
 
-tercen.r.operator.folder: /scidata/operator/
-tercen.r.packrat.global.cache: /scidata/packrat/
-
-tercen.r.cmd: /usr/bin/R
+tercen.r.cmd: /usr/local/bin/R
 tercen.r.args:
 - "--no-save"
 - "--no-restore"
@@ -59,7 +55,7 @@ tercen.unzip.cmd: /usr/bin/unzip
 #tercen.r.lib.user: "resources/R_library_%v"
 #tercen.r.home: "resources/R"
 
-tercen.library.url: https://raw.githubusercontent.com/tercen/app-library/master/library_0.0.1.json
+tercen.library.url: https://raw.githubusercontent.com/tercen/app-library/master/library_0.0.2.json
 
 tercen.gc.interval: '10' # in minutes
 tercen.gc.unclaim.task: '43200' # in minutes
