@@ -12,6 +12,7 @@ cd tercen_docker
 Then start tercen ...
 
 ```bash
+docker-compose pull
 docker-compose up
 ```
 
