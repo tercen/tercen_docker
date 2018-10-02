@@ -1,13 +1,18 @@
 Run Tercen using Docker.
 
-# Linux Setup
-Install [docker-compose](https://docs.docker.com/compose/).
+# Setup
+Install [docker-compose](https://docs.docker.com/compose/).for Linux or Wpndows or Mac
+
 
 Clone the following repository
 ```bash
 git clone https://github.com/tercen/tercen_docker.git
 cd tercen_docker
 ```
+
+Activate shared drives (Windows and Mac only)
+* right click on the running docker service and select "settings">"shared drives"
+* share the folder tercen_docker 
 
 Then start tercen ...
 
@@ -18,21 +23,3 @@ docker-compose up
 
 Go to [http://127.0.0.1:5402](http://127.0.0.1:5402)
 
-# Windows and Mac Setup
-1. install docker for windows/mac
-    - create a docker account (i.e. docker id) 
-    - download windowsCE for docker
-    - run the windows/mac install
-    - logout and login (windows only)
-2. activate one drive to be shared
-    - Right click docker service
-    - Choose settings
-    - Go to shared drive
-    - Activate one drive
-3. clone tercen_docker  (git clone tercen_docker)
-4. change to tercen_docker directory
-5. open command promt and type "docker-compose up"
-6. leave the command prompt open
-7. tercen is now running
-
-Go to [http://127.0.0.1:5402](http://127.0.0.1:5402)
