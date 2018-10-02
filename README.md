@@ -1,7 +1,7 @@
 Run Tercen using Docker.
 
 # Setup
-Install [docker-compose](https://docs.docker.com/compose/install/).for Linux or Wondows or Mac.
+Install [docker-compose](https://docs.docker.com/compose/install/) for Linux or Windows or Mac.
 
 
 Clone the following repository
