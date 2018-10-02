@@ -19,10 +19,10 @@ docker-compose up
 Go to [http://127.0.0.1:5402](http://127.0.0.1:5402)
 
 # Windows and Mac Setup
-1. install docker
+1. install docker for windows/mac
     - create a docker account (i.e. docker id) 
     - download windowsCE for docker
-    - run the windows install
+    - run the windows/mac install
     - logout and login (windows only)
 2. activate one drive to be shared
     - Right click docker service
