@@ -23,7 +23,7 @@ Go to [http://127.0.0.1:5402](http://127.0.0.1:5402)
     - create a docker account (i.e. docker id) 
     - download windowsCE for docker
     - run the windows install
-    -logout and login to windows
+    - logout and login (windows only)
 2. activate one drive to be shared
     - Right click docker service
     - Choose settings
