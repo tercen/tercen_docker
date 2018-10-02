@@ -18,7 +18,7 @@ docker-compose up
 
 Go to [http://127.0.0.1:5402](http://127.0.0.1:5402)
 
-# Windows Setup
+# Windows and Mac Setup
 1. install docker
     - create a docker account (i.e. docker id) 
     - download windowsCE for docker
