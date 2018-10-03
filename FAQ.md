@@ -26,7 +26,7 @@ changed using tercen docker-compose file.
 Yes, but it requires implementation from our side, send email to `info@tercen.com`
 
 #### How do we integrate with JuypterHub?
-We are not sure yet but are will to investigate
+We are not sure yet but are willing to investigate if its important, send email to `info@tercen.com`
 
 #### How to integrate with BeeGFS?
 A BeeGFS docker volume plugin is available.
