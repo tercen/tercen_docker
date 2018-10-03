@@ -1,9 +1,9 @@
 # General FAQ
 
 #### Can I modify the tercen docker configuration?
-Tercen uses docker-compose and therefore very configurable. There is a docker-compose configuration yaml file which defines the important settings.
+Tercen uses docker-compose and therefore very configurable. There is a docker-compose yaml configuration file which defines the important settings.
 There are two main mechanisms to modify a tercen docker configuration
-* modify the yaml file
+* modify the yaml configuration file
 * use environment variables to override any settings in the yaml file
 
 The following are typical modifications:
@@ -15,7 +15,7 @@ The following are typical modifications:
 The volumes (i.e folders) are indicated in the docker yaml configuration file and it can be modified to point to alternative locations.
 Currently there are two volumes defined in the configuration file the `tercen-data`and `couchdb-data`
 
-For windows, there is an extra layer, it is in the virtual hardisk of virtual PC ( on windows, the mobylinux virtual hardware is located
+For windows, there is an extra layer, it is in the virtual hardisk of virtual PC (on windows, the mobylinux virtual hardware is located
 `C:\Users\Public\Documents\Hyper-V\Virtual hard disks\MobyLinuxVM.vhdx`
 
 #### Can I add a nginx frontend?
@@ -34,19 +34,19 @@ https://github.com/RedCoolBeans/docker-volume-beegfs
 A demo video
 https://youtu.be/pUXzBqmfrdk?t=1355
 
-In current docker-compose file Tercen is using 2 volumes one for the 
+In current docker-compose file tercen is using 2 volumes one for the 
 meta data and the other for data.
-Can be changed using tercen docker-compose file.
+This can be changed using tercen docker-compose file.
 
 #### What is the mnt point for the data?
-Right now tercen compose file is using docker volumes, but can be 
-changed using tercen docker-compose file, a specific folder can mounted.
+Right now tercen compose file is using docker volumes, but it can be 
+changed using tercen docker-compose file, a specific folder can be mounted.
 
 #### Where is the data located?
 Depends on docker-compose file configuration.
 
 #### How to limit resources (cpu/harddisk) limitations for users?
-It's done per Tercen team owner.
+It's done per tercen team owner.
 
 #### How to handle permission for users?
 Not possible in current version.
