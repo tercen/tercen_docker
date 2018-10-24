@@ -8,3 +8,14 @@ DefaultProfiles:
 - 2.cpuTime.profile
 - 2.storage.profile
 - 2.run.profile
+
+# LDAP
+#tercen.user.service: 'ldap'
+#tercen.user.service.ldap.host: '127.0.0.1'
+#tercen.user.service.ldap.protocol: ''
+#tercen.user.service.ldap.port: '389'
+## TLS
+## tercen.user.service.ldap.protocol: 'ssl'
+## tercen.user.service.ldap.port: '636'
+#
+#tercen.user.service.ldap.bind: 'dc=example,dc=org'

@@ -23,7 +23,7 @@ Yes, tercen is using http and websocket on port 5400 or 5402 ... can be
 changed using tercen docker-compose file.
 
 #### Can I add a LDAP directory for user?
-Yes, but it requires implementation from our side, send email to `info@tercen.com`
+Yes, see [see](doc/auth.md)
 
 #### How do we integrate with JuypterHub?
 We are not sure yet but are willing to investigate if its important, send email to `info@tercen.com`
