@@ -43,7 +43,7 @@ BindCN = "cn=user_name,${tercen_user_service_ldap_bind}"
 Password = "user_password"
 ```
 
-if the bind operation succeed a Token is generated,
+if the [bind](https://ldap.com/the-ldap-bind-operation/) operation succeed a Token is generated,
  and a session is created based on that token.
   
 ## OpenLdap
