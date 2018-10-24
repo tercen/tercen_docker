@@ -34,16 +34,23 @@ tercen.user.service.ldap.port: '389'
 tercen.user.service.ldap.bind: 'dc=example,dc=org'
 ```
 
-When a new session is created,a bind operation is perform
+When a new session is created, a bind operation is perform
  on the configure ldap server with
  the following arguments
 
 ```bash
-BindCN = "cn=&{username},${tercen_user_service_ldap_bind}"
-Password = "given_password"
+BindCN = "cn=user_name,${tercen_user_service_ldap_bind}"
+Password = "user_password"
 ```
 
 if the bind operation succeed a Token is generated,
  and a session is created based on that token.
   
- 
+## OpenLdap
+
+```bash
+docker run -it -d  --name openldap --net=host \
+        -e LDAP_TLS=false \
+        -e LDAP_ADMIN_PASSWORD=admin \
+        osixia/openldap:1.2.2
+```
