@@ -17,9 +17,27 @@ Activate shared drives (Windows and Mac only)
 Then start tercen ...
 
 ```bash
-docker-compose pull
 docker-compose up
 ```
 
 Go to [http://127.0.0.1:5402](http://127.0.0.1:5402)
 
+
+To update tercen
+
+```bash
+git pull
+docker-compose down
+docker-compose up
+```
+
+To uninstall
+
+```bash
+docker-compose down
+# check tercen docker volumes names
+docker volume ls
+# delete tercen docker volumes
+docker volume rm tercendocker_couchdb-data
+docker volume rm tercendocker_tercen-data
+```
