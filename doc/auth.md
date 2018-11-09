@@ -34,8 +34,8 @@ tercen.user.service.ldap.port: '389'
 tercen.user.service.ldap.bind: 'dc=example,dc=org'
 ```
 
-When a new session is created, a bind operation is perform
- on the configure ldap server with
+When a new session is created, a bind operation is performed
+ on the configured ldap server with
  the following arguments
 
 ```bash
