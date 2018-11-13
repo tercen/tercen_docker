@@ -31,21 +31,23 @@ tercen.user.service.ldap.port: '389'
 # tercen.user.service.ldap.protocol: 'ssl'
 # tercen.user.service.ldap.port: '636'
 
-tercen.user.service.ldap.bind: 'dc=example,dc=org'
+tercen.user.service.ldap.admin.dn: cn=admin,dc=example,dc=org
+tercen.user.service.ldap.admin.password: admin
+tercen.user.service.ldap.base.search: dc=example,dc=org
+tercen.user.service.ldap.search.attribute: uid
 ```
 
-When a new session is created, a bind operation is performed
- on the configured ldap server with
- the following arguments
-
-```bash
-BindCN = "cn=user_name,${tercen_user_service_ldap_bind}"
-Password = "user_password"
-```
-
-if the [bind](https://ldap.com/the-ldap-bind-operation/) operation succeed a Token is generated,
+When a new session is created, the following is executed
+- using ldap admin account, search for an object where uid=username
+- if not found an invalid credential error is generated
+- if found, use the object DN and password to perform a [bind](https://ldap.com/the-ldap-bind-operation/)
+- if the [bind](https://ldap.com/the-ldap-bind-operation/) operation succeed a Token is generated,
  and a session is created based on that token.
   
+## TLS
+
+For now self signed certificate is accepted.
+
 ## OpenLdap
 
 ```bash
