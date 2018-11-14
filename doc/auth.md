@@ -35,7 +35,10 @@ tercen.user.service.ldap.admin.dn: cn=admin,dc=example,dc=org
 tercen.user.service.ldap.admin.password: admin
 tercen.user.service.ldap.base.search: dc=example,dc=org
 tercen.user.service.ldap.search.attribute: uid
+tercen.user.service.ldap.method: compare
+# tercen.user.service.ldap.method: bind
 ```
+## Authentication directly to the LDAP server ("bind" authentication).
 
 When a new session is created, the following is executed
 - using ldap admin account, search for an object where uid=username
@@ -44,6 +47,14 @@ When a new session is created, the following is executed
 - if the [bind](https://ldap.com/the-ldap-bind-operation/) operation succeed a Token is generated,
  and a session is created based on that token.
   
+## Password comparison
+
+When a new session is created, the following is executed
+- using ldap admin account, search for an object where uid=username
+- if not found an invalid credential error is generated
+- if found, compare stored password (SSHA) with given password
+- if passwords match a Token is generated, and a session is created based on that token.
+
 ## TLS
 
 For now self signed certificate is accepted.
