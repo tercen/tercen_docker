@@ -35,8 +35,8 @@ tercen.user.service.ldap.admin.dn: cn=admin,dc=example,dc=org
 tercen.user.service.ldap.admin.password: admin
 tercen.user.service.ldap.base.search: dc=example,dc=org
 tercen.user.service.ldap.search.attribute: uid
-tercen.user.service.ldap.method: compare
-# tercen.user.service.ldap.method: bind
+# tercen.user.service.ldap.method: compare
+tercen.user.service.ldap.method: bind
 ```
 ## Authentication directly to the LDAP server ("bind" authentication).
 
